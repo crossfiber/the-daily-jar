@@ -31,13 +31,13 @@
 <meta name="twitter:image:alt" content="The Daily Jar, handcrafted grass-fed tallow skincare in small batches">
 
 <!-- Favicon (placeholder; clean logo asset needed from client) -->
-<link rel="icon" type="image/jpeg" href="assets/lid-logo.jpg">
-<link rel="apple-touch-icon" href="assets/lid-logo.jpg">
+<link rel="icon" type="image/png" href="assets/logo-1.png">
+<link rel="apple-touch-icon" href="assets/logo-1.png">
 
 <!-- Fonts: Fraunces (headlines), Hanken Grotesk (body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Font Awesome 6 -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -201,11 +201,7 @@
     padding: 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
   }
   .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-  .brand .mark { color: var(--honey); font-size: 1.15rem; }
-  .brand .wordmark {
-    font-family: 'Pacifico', cursive; font-weight: 400; font-size: 1.62rem;
-    color: var(--forest-deep); line-height: 1.15; letter-spacing: 0;
-  }
+  .brand-logo { height: 52px; width: auto; display: block; }
   .nav-links { display: flex; align-items: center; gap: 30px; }
   .nav-links a {
     font-size: 0.95rem; font-weight: 600; color: var(--ink);
@@ -248,7 +244,7 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 20px 22px; border-bottom: 1px solid var(--line);
   }
-  .drawer-header .wordmark { font-family: 'Pacifico', cursive; font-weight: 400; font-size: 1.5rem; color: var(--forest-deep); }
+  .drawer-logo { height: 46px; width: auto; display: block; }
   .drawer-close { background: none; border: none; cursor: pointer; color: var(--forest-deep); font-size: 1.5rem; width: 44px; height: 44px; }
   .drawer-close:hover { color: var(--honey-deep); }
   .drawer-links { display: flex; flex-direction: column; padding: 14px 22px; gap: 4px; flex: 1; }
@@ -497,8 +493,7 @@
   /* ===== FOOTER ===== */
   footer.site-footer { background: var(--forest-deep); color: var(--bone); padding: 70px 0 28px; }
   .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 40px; }
-  .footer-brand .wordmark { font-family: 'Pacifico', cursive; font-size: 2rem; font-weight: 400; color: var(--bone); display: inline-flex; align-items: center; gap: 10px; }
-  .footer-brand .wordmark .mark { color: var(--honey); }
+  .footer-logo { height: 74px; width: auto; display: block; }
   .footer-brand p { color: var(--bone-mute); font-size: 0.96rem; margin: 16px 0 20px; max-width: 30em; }
   .footer-social { display: flex; gap: 12px; }
   .footer-social a { width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line-dark); display: flex; align-items: center; justify-content: center; color: var(--bone); transition: background 0.18s ease, color 0.18s ease; }
@@ -546,14 +541,14 @@
   @media (max-width: 768px) {
     nav.site-nav { height: var(--nav-h-sm); }
     .nav-inner { padding: 0 20px; }
-    .brand .wordmark { font-size: 1.5rem; }
+    .brand-logo { height: 42px; }
     .hero { padding: calc(var(--nav-h-sm) + 26px) 0 60px; }
     .hero-media { max-width: 240px; }
     .hero-leaf { display: none; }
     .section { padding: 58px 0; }
     footer.site-footer { padding: 52px 0 22px; }
     .footer-grid { gap: 20px 18px; }
-    .footer-brand .wordmark { font-size: 1.78rem; }
+    .footer-logo { height: 66px; }
     .footer-brand p { margin: 12px 0 14px; font-size: 0.92rem; }
     .footer-col h4 { margin-bottom: 12px; }
     .footer-bottom { margin-top: 28px; }
@@ -618,8 +613,7 @@
 <nav class="site-nav" id="siteNav" aria-label="Primary">
   <div class="nav-inner">
     <a href="#top" class="brand" aria-label="The Daily Jar home">
-      <i class="fa-solid fa-jar mark" aria-hidden="true"></i>
-      <span class="wordmark">The Daily Jar</span>
+      <img src="assets/logo-1.png" alt="The Daily Jar" class="brand-logo">
     </a>
     <div class="nav-links">
       <a href="#collection">Shop</a>
@@ -640,7 +634,7 @@
 <div class="nav-overlay" id="navOverlay"></div>
 <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="Mobile navigation">
   <div class="drawer-header">
-    <span class="wordmark">The Daily Jar</span>
+    <img src="assets/logo-1.png" alt="The Daily Jar" class="drawer-logo">
     <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
   </div>
   <nav class="drawer-links" aria-label="Mobile">
@@ -1013,7 +1007,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="wordmark"><i class="fa-solid fa-jar mark" aria-hidden="true"></i> The Daily Jar</span>
+        <img src="assets/logo-1.png" alt="The Daily Jar" class="footer-logo">
         <p>Handcrafted grass-fed tallow skincare, made in small batches by Will &amp; Juju. Real botanicals, nothing synthetic.</p>
         <div class="footer-social">
           <!-- [SOCIAL LINKS NEEDED FROM CLIENT] -->
