@@ -37,7 +37,7 @@
 <!-- Fonts: Fraunces (headlines), Hanken Grotesk (body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
 <!-- Font Awesome 6 -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -201,7 +201,8 @@
     padding: 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
   }
   .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-  .brand-logo { height: 52px; width: auto; display: block; }
+  .brand-logo { height: 58px; width: auto; display: block; }
+  .brand .wordmark { font-family: 'Pacifico', cursive; font-weight: 400; font-size: 1.5rem; color: var(--forest-deep); line-height: 1.15; white-space: nowrap; }
   .nav-links { display: flex; align-items: center; gap: 30px; }
   .nav-links a {
     font-size: 0.95rem; font-weight: 600; color: var(--ink);
@@ -244,7 +245,9 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 20px 22px; border-bottom: 1px solid var(--line);
   }
-  .drawer-logo { height: 46px; width: auto; display: block; }
+  .drawer-logo { height: 50px; width: auto; display: block; }
+  .drawer-brand { display: flex; align-items: center; gap: 10px; }
+  .drawer-header .wordmark { font-family: 'Pacifico', cursive; font-weight: 400; font-size: 1.4rem; color: var(--forest-deep); }
   .drawer-close { background: none; border: none; cursor: pointer; color: var(--forest-deep); font-size: 1.5rem; width: 44px; height: 44px; }
   .drawer-close:hover { color: var(--honey-deep); }
   .drawer-links { display: flex; flex-direction: column; padding: 14px 22px; gap: 4px; flex: 1; }
@@ -541,7 +544,8 @@
   @media (max-width: 768px) {
     nav.site-nav { height: var(--nav-h-sm); }
     .nav-inner { padding: 0 20px; }
-    .brand-logo { height: 42px; }
+    .brand-logo { height: 46px; }
+    .brand .wordmark { font-size: 1.3rem; }
     .hero { padding: calc(var(--nav-h-sm) + 26px) 0 60px; }
     .hero-media { max-width: 240px; }
     .hero-leaf { display: none; }
@@ -596,6 +600,8 @@
 
   @media (max-width: 420px) {
     .hero h1 { font-size: 2.35rem; }
+    .brand-logo { height: 42px; }
+    .brand .wordmark { font-size: 1.15rem; }
     .scent-card { flex: 0 0 86%; }
     .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
     .hero-badge { font-size: 0.82rem; padding: 11px 16px; }
@@ -614,6 +620,7 @@
   <div class="nav-inner">
     <a href="#top" class="brand" aria-label="The Daily Jar home">
       <img src="assets/logo-1.png" alt="The Daily Jar" class="brand-logo">
+      <span class="wordmark">The Daily Jar</span>
     </a>
     <div class="nav-links">
       <a href="#collection">Shop</a>
@@ -634,7 +641,7 @@
 <div class="nav-overlay" id="navOverlay"></div>
 <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="Mobile navigation">
   <div class="drawer-header">
-    <img src="assets/logo-1.png" alt="The Daily Jar" class="drawer-logo">
+    <span class="drawer-brand"><img src="assets/logo-1.png" alt="The Daily Jar" class="drawer-logo"><span class="wordmark">The Daily Jar</span></span>
     <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
   </div>
   <nav class="drawer-links" aria-label="Mobile">
