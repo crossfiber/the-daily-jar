@@ -156,11 +156,10 @@
   section { position: relative; }
 
   .eyebrow {
-    display: inline-flex; align-items: center; gap: 9px;
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--sage);
-    margin-bottom: 18px;
+    display: inline-block;
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 500;
+    font-size: 1.05rem; color: var(--honey-deep);
+    margin-bottom: 14px;
   }
 
   /* ===== Buttons ===== */
@@ -285,11 +284,10 @@
   }
   .hero-chip {
     display: inline-flex; align-items: center; gap: 9px;
-    background: var(--ivory); border: 1px solid var(--line);
-    padding: 8px 16px; border-radius: 999px; font-size: 0.82rem; font-weight: 600; color: var(--ink-soft);
-    margin-bottom: 22px; box-shadow: var(--shadow-sm);
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; color: var(--ink-soft);
+    margin-bottom: 20px;
   }
-  .hero-chip i { color: var(--honey-deep); }
+  .hero-chip i { color: var(--honey-deep); font-style: normal; }
   .hero h1 {
     font-size: clamp(2.6rem, 5.4vw, 4.05rem);
     line-height: 1.04; margin-bottom: 22px;
@@ -340,12 +338,12 @@
   }
   .trust-line { font-family: 'Fraunces', serif; font-size: 1.42rem; font-weight: 500; color: var(--bone); max-width: 18em; line-height: 1.28; }
   .trust-line b { color: var(--honey); font-weight: 600; }
-  .trust-chips { display: flex; gap: 14px; flex-wrap: wrap; }
+  .trust-chips { display: flex; gap: 0; flex-wrap: wrap; }
   .trust-chip {
-    display: inline-flex; align-items: center; gap: 9px; font-size: 0.86rem; font-weight: 600;
-    color: var(--bone); background: rgba(242,238,226,0.08); border: 1px solid var(--line-dark);
-    padding: 10px 16px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 9px; font-size: 0.9rem; font-weight: 600;
+    color: var(--bone); padding: 2px 20px; border-left: 1px solid var(--line-dark);
   }
+  .trust-chip:first-child { padding-left: 0; border-left: none; }
   .trust-chip i { color: var(--honey); }
 
   /* ===== SECTION SHELL ===== */
@@ -370,15 +368,9 @@
   .scent-top { height: 6px; width: 100%; }
   .scent-media { aspect-ratio: 1 / 1; background: var(--cream-2); position: relative; overflow: hidden; }
   .scent-media img { width: 100%; height: 100%; object-fit: cover; }
-  .scent-tag {
-    position: absolute; top: 14px; left: 14px; z-index: 2;
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
-    background: var(--ivory); color: var(--ink); padding: 6px 12px; border-radius: 999px;
-    border: 1px solid var(--line); display: inline-flex; align-items: center; gap: 7px;
-  }
   .scent-body { padding: 24px 24px 26px; display: flex; flex-direction: column; flex: 1; }
   .scent-body h3 { font-size: 1.5rem; margin-bottom: 6px; }
-  .scent-notes { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 14px; }
+  .scent-notes { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; font-weight: 500; margin-bottom: 12px; }
   .scent-desc { color: var(--ink-soft); font-size: 0.98rem; flex: 1; }
   .scent-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; gap: 14px; }
   .scent-price { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; color: var(--forest-deep); }
@@ -396,7 +388,7 @@
   .why-text h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); margin-bottom: 18px; }
   .why-text > p { color: var(--ink-soft); font-size: 1.06rem; margin-bottom: 26px; max-width: 34em; }
   .why-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; margin-bottom: 12px; }
-  .why-col h4 { font-family: 'Hanken Grotesk', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px; color: var(--sage); }
+  .why-col h4 { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.05rem; font-weight: 500; margin-bottom: 12px; color: var(--forest); }
   .why-item { display: flex; align-items: flex-start; gap: 11px; margin-bottom: 11px; font-size: 0.96rem; }
   .why-item i { margin-top: 3px; width: 18px; text-align: center; }
   .why-item.in i { color: var(--forest); }
@@ -444,7 +436,7 @@
   .review.featured .who-avatar { background: rgba(242,238,226,0.12); color: var(--honey); }
   .review .who-name { font-weight: 700; font-size: 0.96rem; color: var(--ink); }
   .review .who-role { font-size: 0.84rem; color: var(--ink-soft); }
-  .review-ph { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--honey-deep); margin-bottom: 12px; }
+  .review-ph { font-family: 'Fraunces', serif; font-style: italic; font-size: 0.84rem; color: var(--honey-deep); margin-bottom: 10px; }
 
   /* ===== FAQ ===== */
   .faq-wrap { max-width: 820px; margin: 48px auto 0; }
@@ -492,8 +484,9 @@
   .order-card h3 { color: var(--bone); font-size: 1.36rem; margin-bottom: 10px; }
   .order-card p { color: var(--bone-mute); font-size: 0.96rem; margin-bottom: 20px; }
   .order-card .btn { width: 100%; }
-  .order-facts { display: flex; flex-direction: column; gap: 14px; }
-  .order-fact { display: flex; align-items: flex-start; gap: 14px; background: var(--ivory); border: 1px solid var(--line); border-radius: 13px; padding: 16px 18px; }
+  .order-facts { display: flex; flex-direction: column; gap: 0; }
+  .order-fact { display: flex; align-items: flex-start; gap: 14px; padding: 16px 2px; border-top: 1px solid var(--line); }
+  .order-fact:first-child { border-top: none; padding-top: 2px; }
   .order-fact i { color: var(--honey-deep); font-size: 1.1rem; margin-top: 3px; width: 22px; text-align: center; }
   .order-fact h4 { font-family: 'Hanken Grotesk', sans-serif; font-size: 0.96rem; font-weight: 700; margin-bottom: 2px; color: var(--ink); }
   .order-fact p { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
@@ -563,6 +556,8 @@
     .trust { margin-top: -48px; }
     .trust-inner { padding: 26px 24px; flex-direction: column; align-items: flex-start; gap: 20px; }
     .trust-line { font-size: 1.24rem; }
+    .trust-chips { flex-direction: column; gap: 8px; }
+    .trust-chip { border-left: none; padding: 0; }
     .ritual-steps { grid-template-columns: 1fr; gap: 0; margin-top: 24px; }
     .ritual-step { display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: start; padding: 15px 0; border-top: 1px solid var(--line); }
     .ritual-step:first-child { border-top: none; padding-top: 0; }
@@ -718,12 +713,11 @@
       <article class="scent-card">
         <div class="scent-top" style="background: var(--rose);"></div>
         <div class="scent-media">
-          <span class="scent-tag"><i class="fa-solid fa-spa" aria-hidden="true" style="color: var(--rose);"></i> Floral</span>
           <img src="assets/rose-glow.jpg" alt="Rose Glow tallow balm by The Daily Jar, scented with rose and jasmine" loading="lazy">
         </div>
         <div class="scent-body">
           <h3>Rose Glow</h3>
-          <p class="scent-notes" style="color: var(--rose);">Rose + Jasmine</p>
+          <p class="scent-notes" style="color: var(--rose);">Floral &middot; Rose + Jasmine</p>
           <p class="scent-desc">Soft, floral, and a little romantic. Rosa Damascena and jasmine over clean grass-fed tallow for everyday glow.</p>
           <div class="scent-foot">
             <span class="scent-price">$20 <small>/ 4 oz</small></span>
@@ -736,12 +730,11 @@
       <article class="scent-card">
         <div class="scent-top" style="background: var(--golden);"></div>
         <div class="scent-media">
-          <span class="scent-tag"><i class="fa-solid fa-sun" aria-hidden="true" style="color: var(--golden);"></i> Bright</span>
           <img src="assets/golden-garden.jpg" alt="Golden Garden tallow balm by The Daily Jar, scented with sweet orange and chamomile" loading="lazy">
         </div>
         <div class="scent-body">
           <h3>Golden Garden</h3>
-          <p class="scent-notes" style="color: var(--golden);">Sweet Orange + Chamomile</p>
+          <p class="scent-notes" style="color: var(--golden);">Bright &middot; Sweet Orange + Chamomile</p>
           <p class="scent-desc">Calming and bright at once. Sweet orange lifts, chamomile settles. The one people reach for morning and night.</p>
           <div class="scent-foot">
             <span class="scent-price">$20 <small>/ 4 oz</small></span>
@@ -754,12 +747,11 @@
       <article class="scent-card">
         <div class="scent-top" style="background: var(--cozy);"></div>
         <div class="scent-media">
-          <span class="scent-tag"><i class="fa-solid fa-mug-hot" aria-hidden="true" style="color: var(--cozy);"></i> Grounding</span>
           <img src="assets/warm-cozy.jpg" alt="Warm and Cozy tallow balm by The Daily Jar, scented with sandalwood and vanilla" loading="lazy">
         </div>
         <div class="scent-body">
           <h3>Warm &amp; Cozy</h3>
-          <p class="scent-notes" style="color: var(--cozy);">Sandalwood + Vanilla</p>
+          <p class="scent-notes" style="color: var(--cozy);">Grounding &middot; Sandalwood + Vanilla</p>
           <p class="scent-desc">Warm, woody, and comforting. Sandalwood and vanilla make this the cold-weather, wind-down, sweater-season jar.</p>
           <div class="scent-foot">
             <span class="scent-price">$20 <small>/ 4 oz</small></span>
