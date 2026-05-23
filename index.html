@@ -303,24 +303,41 @@
   .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
   .hero-meta i { color: var(--sage); }
 
-  .hero-media { position: relative; }
+  .hero-media { position: relative; display: flex; flex-direction: column; align-items: center; }
   .hero-image-inner {
     position: relative; border-radius: 24px; overflow: hidden;
     aspect-ratio: 4 / 5; background: var(--cream-2);
     box-shadow: var(--shadow-md); border: 1px solid var(--line);
   }
   .hero-image-inner img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Hero logo centerpiece: soft glow + gentle entrance and float */
+  .hero-logo-stage {
+    position: relative; display: inline-flex; align-items: center; justify-content: center;
+    padding: 10px; animation: heroStageIn 0.9s cubic-bezier(.2,.7,.2,1) both;
+  }
+  .hero-logo-stage::before {
+    content: ""; position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%);
+    width: 90%; aspect-ratio: 1 / 1; border-radius: 50%;
+    background: radial-gradient(circle at 50% 45%, rgba(194,152,47,0.30), rgba(126,140,87,0.16) 52%, rgba(246,240,225,0) 72%);
+    filter: blur(22px); z-index: 0; animation: heroGlow 6.5s ease-in-out infinite;
+  }
+  .hero-logo {
+    position: relative; z-index: 1; width: min(380px, 82%); height: auto;
+    filter: drop-shadow(0 16px 26px rgba(40,48,42,0.22));
+    animation: heroFloat 6s ease-in-out 0.9s infinite;
+  }
   .hero-badge {
-    position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 50%);
-    background: var(--forest); color: var(--bone); z-index: 3;
+    position: relative; z-index: 3; margin-top: 2px;
+    background: var(--forest); color: var(--bone);
     padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 0.92rem;
     display: inline-flex; align-items: center; gap: 9px; box-shadow: 0 10px 24px rgba(22,39,26,0.28);
     white-space: nowrap;
   }
   .hero-badge i { color: var(--honey); }
-  .hero-leaf { position: absolute; z-index: 1; color: var(--sage); opacity: 0.5; }
-  .hero-leaf.one { top: -14px; right: -10px; font-size: 2.4rem; transform: rotate(18deg); }
-  .hero-leaf.two { bottom: 26px; left: -22px; font-size: 2rem; transform: rotate(-24deg); color: var(--honey); opacity: 0.45; }
+  @keyframes heroStageIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes heroFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+  @keyframes heroGlow { 0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 1; transform: translate(-50%, -50%) scale(1.06); } }
 
 
   /* ===== TRUST BAND (overlaps hero) ===== */
@@ -533,7 +550,6 @@
     .hamburger { display: flex; }
     .hero-grid { grid-template-columns: 1fr; gap: 36px; }
     .hero-media { max-width: 320px; margin: 0 auto; }
-    .hero-image-inner { aspect-ratio: 1 / 1; }
     .contact-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 26px 22px; }
     .footer-brand { grid-column: 1 / -1; }
@@ -547,8 +563,7 @@
     .brand-logo { height: 46px; }
     .brand .wordmark { font-size: 1.3rem; }
     .hero { padding: calc(var(--nav-h-sm) + 26px) 0 60px; }
-    .hero-media { max-width: 240px; }
-    .hero-leaf { display: none; }
+    .hero-media { max-width: 274px; }
     .section { padding: 58px 0; }
     footer.site-footer { padding: 52px 0 22px; }
     .footer-grid { gap: 20px 18px; }
@@ -679,10 +694,8 @@
         </div>
       </div>
       <div class="hero-media">
-        <i class="fa-solid fa-leaf hero-leaf one" aria-hidden="true"></i>
-        <i class="fa-solid fa-seedling hero-leaf two" aria-hidden="true"></i>
-        <div class="hero-image-inner">
-          <img src="assets/hero-golden.jpg" alt="The Daily Jar Golden Garden tallow balm, a 4 oz frosted glass jar with a natural wood lid beside chamomile flowers" loading="eager">
+        <div class="hero-logo-stage">
+          <img src="assets/logo-1.png" alt="The Daily Jar handcrafted tallow skincare logo" class="hero-logo">
         </div>
         <span class="hero-badge"><i class="fa-solid fa-heart" aria-hidden="true"></i> 400+ jars hand-poured</span>
       </div>
