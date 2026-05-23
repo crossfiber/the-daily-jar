@@ -37,7 +37,7 @@
 <!-- Fonts: Fraunces (headlines), Hanken Grotesk (body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Kaushan+Script&display=swap" rel="stylesheet">
 
 <!-- Font Awesome 6 -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -203,8 +203,8 @@
   .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
   .brand .mark { color: var(--honey); font-size: 1.15rem; }
   .brand .wordmark {
-    font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.42rem;
-    color: var(--forest-deep); line-height: 1; letter-spacing: -0.01em;
+    font-family: 'Kaushan Script', cursive; font-weight: 400; font-size: 1.62rem;
+    color: var(--forest-deep); line-height: 1.15; letter-spacing: 0;
   }
   .nav-links { display: flex; align-items: center; gap: 30px; }
   .nav-links a {
@@ -248,7 +248,7 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 20px 22px; border-bottom: 1px solid var(--line);
   }
-  .drawer-header .wordmark { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.25rem; color: var(--forest-deep); }
+  .drawer-header .wordmark { font-family: 'Kaushan Script', cursive; font-weight: 400; font-size: 1.5rem; color: var(--forest-deep); }
   .drawer-close { background: none; border: none; cursor: pointer; color: var(--forest-deep); font-size: 1.5rem; width: 44px; height: 44px; }
   .drawer-close:hover { color: var(--honey-deep); }
   .drawer-links { display: flex; flex-direction: column; padding: 14px 22px; gap: 4px; flex: 1; }
@@ -497,7 +497,7 @@
   /* ===== FOOTER ===== */
   footer.site-footer { background: var(--forest-deep); color: var(--bone); padding: 70px 0 28px; }
   .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 40px; }
-  .footer-brand .wordmark { font-family: 'Fraunces', serif; font-size: 1.7rem; font-weight: 600; color: var(--bone); display: inline-flex; align-items: center; gap: 10px; }
+  .footer-brand .wordmark { font-family: 'Kaushan Script', cursive; font-size: 2rem; font-weight: 400; color: var(--bone); display: inline-flex; align-items: center; gap: 10px; }
   .footer-brand .wordmark .mark { color: var(--honey); }
   .footer-brand p { color: var(--bone-mute); font-size: 0.96rem; margin: 16px 0 20px; max-width: 30em; }
   .footer-social { display: flex; gap: 12px; }
@@ -546,14 +546,14 @@
   @media (max-width: 768px) {
     nav.site-nav { height: var(--nav-h-sm); }
     .nav-inner { padding: 0 20px; }
-    .brand .wordmark { font-size: 1.28rem; }
+    .brand .wordmark { font-size: 1.5rem; }
     .hero { padding: calc(var(--nav-h-sm) + 26px) 0 60px; }
     .hero-media { max-width: 240px; }
     .hero-leaf { display: none; }
     .section { padding: 58px 0; }
     footer.site-footer { padding: 52px 0 22px; }
     .footer-grid { gap: 20px 18px; }
-    .footer-brand .wordmark { font-size: 1.45rem; }
+    .footer-brand .wordmark { font-size: 1.78rem; }
     .footer-brand p { margin: 12px 0 14px; font-size: 0.92rem; }
     .footer-col h4 { margin-bottom: 12px; }
     .footer-bottom { margin-top: 28px; }
