@@ -38,9 +38,17 @@ Warm botanical-apothecary built from The Daily Jar's own label language: cream p
 - JOTL (`C:\Users\accc0\Downloads\JOTL\index.html`) — borrowed mobile drawer, single-open accordion, scroll-snap carousel, static JS form validation, CSS-variable architecture. See `borrowed-patterns.md`. No visual identity borrowed.
 
 ## Checkout
-Build ships with swappable "Add to Cart / Shop" CTA hooks. Recommended: Shopify Buy Button (owner self-manages inventory/shipping/tax, ~$5/mo, confirm price). Alternative: Stripe Payment Links (zero monthly, manual inventory). See `design-direction.md`.
+Build ships with swappable "Add to Cart / Shop" CTA hooks. Decision (2026-05-23): Stripe Checkout / Payment Links on the custom site, wired to the domain. The Daily Jar is make-to-order with no inventory, so Shopify is unnecessary; Stripe means no monthly platform fee and the design stays fully custom. CTAs route through a single `ORDER_URL` swap point (currently the Google order form). See `design-direction.md`.
 
 ## Files
 - `index.html` — the build (all CSS/JS inline)
 - `assets/` — `jar-trio.jpg`, `lid-logo.jpg` (real owner photos)
 - `design-direction.md`, `borrowed-patterns.md`, `credentials.md` (local only)
+
+## Update 2026-05-23: Product photography added (Higgsfield, Nano Banana Pro)
+Generated reference-driven, brand-correct, label one-to-one photography and wired it into the live site:
+- assets/rose-glow.jpg, assets/golden-garden.jpg, assets/warm-cozy.jpg (scent cards, 1:1)
+- assets/hero-golden.jpg (homepage hero, 4:5)
+- assets/texture-open.jpg (open-jar whipped-balm shot, "why tallow" band)
+- assets/trio-lineup.jpg (bonus collection lineup for marketing/social)
+Big label text (brand, scent name, "All-Over Tallow Balm", Good to Know, Net Wt) renders one-to-one. Tiny ingredient print is approximate at full zoom but illegible at web display size. Alternate variants kept locally in _proofs/. Prompt recipe and shot list in photoshoot-plan.md. Remaining placeholders: clean logo asset, phone, email, socials, verified review count.

@@ -162,9 +162,6 @@
     text-transform: uppercase; color: var(--sage);
     margin-bottom: 18px;
   }
-  .eyebrow::before {
-    content: ""; width: 26px; height: 1.5px; background: var(--honey); display: inline-block;
-  }
 
   /* ===== Buttons ===== */
   .btn {
@@ -540,7 +537,8 @@
     .hero-media { max-width: 320px; margin: 0 auto; }
     .hero-image-inner { aspect-ratio: 1 / 1; }
     .contact-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; gap: 34px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 26px 22px; }
+    .footer-brand { grid-column: 1 / -1; }
     .story { grid-template-columns: 1fr; gap: 34px; }
     .story-media { max-width: 360px; margin: 0 auto; order: -1; }
   }
@@ -551,6 +549,12 @@
     .brand .wordmark { font-size: 1.28rem; }
     .hero { padding: calc(var(--nav-h-sm) + 30px) 0 96px; }
     .section { padding: 76px 0; }
+    footer.site-footer { padding: 52px 0 22px; }
+    .footer-grid { gap: 20px 18px; }
+    .footer-brand .wordmark { font-size: 1.45rem; }
+    .footer-brand p { margin: 12px 0 14px; font-size: 0.92rem; }
+    .footer-col h4 { margin-bottom: 12px; }
+    .footer-bottom { margin-top: 28px; }
     .trust { margin-top: -48px; }
     .trust-inner { padding: 26px 24px; flex-direction: column; align-items: flex-start; gap: 20px; }
     .trust-line { font-size: 1.24rem; }
@@ -1046,12 +1050,12 @@
 if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
 
 // Order endpoint. Currently the live Google order form (works today).
-// Swap ORDER_URL to a Stripe Payment Link or Shopify Buy Button at launch.
+// Swap ORDER_URL to the Stripe Payment Link / Checkout URL once the domain is live.
 var ORDER_URL = "https://docs.google.com/forms/d/e/1FAIpQLScD5oA2P2KWG0xwjzE-AQyKWgrqi9DZPwespPaeodgbl8SvJg/viewform";
 
 (function () {
   // Wire every order CTA to the live order endpoint (single swap point:
-  // change ORDER_URL above to a Stripe Payment Link or Shopify Buy Button at launch).
+  // change ORDER_URL above to the Stripe Payment Link / Checkout URL at launch).
   document.querySelectorAll('[data-buy]').forEach(function (el) {
     el.setAttribute('href', ORDER_URL);
   });
