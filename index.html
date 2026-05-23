@@ -317,27 +317,15 @@
     padding: 10px; animation: heroStageIn 0.9s cubic-bezier(.2,.7,.2,1) both;
   }
   .hero-logo-stage::before {
-    content: ""; position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%);
-    width: 90%; aspect-ratio: 1 / 1; border-radius: 50%;
-    background: radial-gradient(circle at 50% 45%, rgba(194,152,47,0.30), rgba(126,140,87,0.16) 52%, rgba(246,240,225,0) 72%);
-    filter: blur(22px); z-index: 0; animation: heroGlow 6.5s ease-in-out infinite;
+    content: ""; position: absolute; left: 50%; top: 49%; transform: translate(-50%, -50%);
+    width: 88%; aspect-ratio: 1 / 1; border-radius: 50%;
+    background: radial-gradient(circle at 50% 46%, rgba(194,152,47,0.18), rgba(126,140,87,0.10) 54%, rgba(246,240,225,0) 72%);
+    filter: blur(26px); z-index: 0;
   }
   .hero-logo {
     position: relative; z-index: 1; width: min(380px, 82%); height: auto;
-    filter: drop-shadow(0 16px 26px rgba(40,48,42,0.22));
-    animation: heroFloat 6s ease-in-out 0.9s infinite;
   }
-  .hero-badge {
-    position: relative; z-index: 3; margin-top: 2px;
-    background: var(--forest); color: var(--bone);
-    padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 0.92rem;
-    display: inline-flex; align-items: center; gap: 9px; box-shadow: 0 10px 24px rgba(22,39,26,0.28);
-    white-space: nowrap;
-  }
-  .hero-badge i { color: var(--honey); }
   @keyframes heroStageIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes heroFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
-  @keyframes heroGlow { 0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 1; transform: translate(-50%, -50%) scale(1.06); } }
 
 
   /* ===== TRUST BAND (overlaps hero) ===== */
@@ -563,7 +551,8 @@
     .brand-logo { height: 46px; }
     .brand .wordmark { font-size: 1.3rem; }
     .hero { padding: calc(var(--nav-h-sm) + 26px) 0 60px; }
-    .hero-media { max-width: 274px; }
+    .hero-media { display: none; }
+    .hero-meta { display: none; }
     .section { padding: 58px 0; }
     footer.site-footer { padding: 52px 0 22px; }
     .footer-grid { gap: 20px 18px; }
@@ -619,7 +608,6 @@
     .brand .wordmark { font-size: 1.15rem; }
     .scent-card { flex: 0 0 86%; }
     .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
-    .hero-badge { font-size: 0.82rem; padding: 11px 16px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -697,7 +685,6 @@
         <div class="hero-logo-stage">
           <img src="assets/logo-1.png" alt="The Daily Jar handcrafted tallow skincare logo" class="hero-logo">
         </div>
-        <span class="hero-badge"><i class="fa-solid fa-heart" aria-hidden="true"></i> 400+ jars hand-poured</span>
       </div>
     </div>
   </div>
